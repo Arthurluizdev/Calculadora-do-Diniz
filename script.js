@@ -19,8 +19,12 @@ function checkPrime() {
   document.getElementById('result').innerText = `O número ${number} é primo.`;
 }
 
-function handleSelectionChange() {
+function handleCalculate() {
   const operation = document.getElementById('operation-select').value;
+  if (!operation) {
+      document.getElementById('result').innerText = 'Por favor, selecione uma operação.';
+      return;
+  }
   switch (operation) {
       case 'evenodd':
           checkEvenOdd();
@@ -122,26 +126,3 @@ function factorize() {
   }
   document.getElementById('result').innerText = `Os fatores de ${number} são: ${factors.join(', ')}.`;
 }
-
-function handleCalculate() {
-  const operation = document.getElementById('operation-select').value;
-  switch (operation) {
-      case 'evenodd':
-          checkEvenOdd();
-          break;
-      case 'prime':
-          checkPrime();
-          break;
-      case 'mmc':
-      case 'mdc':
-      case 'modulus':
-          openModal(operation);
-          break;
-      case 'factorize':
-          factorize();
-          break;
-      default:
-          break;
-  }
-}
-

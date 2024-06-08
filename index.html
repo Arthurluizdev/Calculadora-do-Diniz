@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Básica de Matemática</title>
+    <title>Calculadora do Diniz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora do Diniz</h1>
+        <h1>Calculadora</h1>
         <div class="form-group">
             <label for="number">Insira um número:</label>
             <input type="number" id="number" name="number">
@@ -23,7 +23,7 @@
                 <option value="factorize">Fatoração</option>
                 <option value="modulus">Módulo</option>
             </select>
-        <button onclick="handleCalculate()">Calcular</button>
+            <button class="calculate-button" onclick="handleCalculate()">Calcular</button>
         </div>
         <div class="result" id="result"></div>
     </div>
@@ -32,9 +32,11 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <p id="modal-prompt"></p>
-            <input type="number" id="modal-input1">
-            <input type="number" id="modal-input2" style="display: none;">
-            <button onclick="submitModal()">OK</button>
+            <div class="modal-inputs">
+                <input type="number" id="modal-input1">
+                <input type="number" id="modal-input2">
+            </div>
+            <button class="modal-button" onclick="submitModal()">OK</button>
         </div>
     </div>
 
