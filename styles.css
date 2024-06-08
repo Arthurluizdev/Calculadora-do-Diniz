@@ -54,7 +54,7 @@ input[type="number"]:focus {
 }
 
 .selection-bar select {
-  width: 100%; /* Increased width by 50% */
+  width: 100%; 
   padding: 20px;
   font-size: 16px;
   margin-bottom: 40px;
@@ -79,7 +79,7 @@ input[type="number"]:focus {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.5s;
-  margin-bottom: 40px; /* Adding margin for spacing between buttons */
+  margin-bottom: 40px; 
 }
 
 .calculate-button:hover {
